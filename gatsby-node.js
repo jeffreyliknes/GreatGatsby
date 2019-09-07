@@ -1,7 +1,7 @@
-const _ = require(`lodash`)
-const Promise = require(`bluebird`)
-const path = require(`path`)
-const slash = require(`slash`)
+const _ = require(`lodash`);
+const Promise = require(`bluebird`);
+const path = require(`path`);
+const slash = require(`slash`);
 
 // Implement the Gatsby API “createPages”. This is
 // called after the Gatsby bootstrap is finished so you have
@@ -10,13 +10,13 @@ const slash = require(`slash`)
 // Will create pages for WordPress pages (route : /{slug})
 // Will create pages for WordPress posts (route : /post/{slug})
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage, createRedirect } = actions
+  const { createPage, createRedirect } = actions;
   createRedirect({
     fromPath: "/",
-    toPath: "/home/",
+    toPath: "/home",
     redirectInBrowser: true,
-    isPermanent: true,
-  })
+    isPermanent: true
+  });
   return new Promise((resolve, reject) => {
     // The “graphql” function allows us to run arbitrary
     // queries against the local WordPress graphql schema. Think of
@@ -45,16 +45,15 @@ exports.createPages = ({ graphql, actions }) => {
     )
       .then(result => {
         if (result.errors) {
-          console.log(result.errors)
-          reject(result.errors)
+          console.log(result.errors);
+          reject(result.errors);
         }
 
         // Create Page pages.
-        const pageTemplate = path.resolve("./src/templates/page.js")
+        const pageTemplate = path.resolve("./src/templates/page.js");
         const portfolioUnderContentTemplate = path.resolve(
           "./src/templates/portfolioUnderContent.js"
-        )
-
+        );
         // We want to create a detailed page for each
         // page node. We'll just use the WordPress Slug for the slug.
         // The Page ID is prefixed with 'PAGE_'
@@ -74,13 +73,13 @@ exports.createPages = ({ graphql, actions }) => {
                 ? portfolioUnderContentTemplate
                 : pageTemplate
             ),
-            context: edge.node,
-          })
-        })
+            context: edge.node
+          });
+        });
       })
       // ==== END PAGES ====
 
-      // ==== PORTFOLIO  ====
+      // ==== PORTFOLIO ====
       .then(() => {
         graphql(
           `
@@ -106,10 +105,12 @@ exports.createPages = ({ graphql, actions }) => {
           `
         ).then(result => {
           if (result.errors) {
-            console.log(result.errors)
-            reject(result.errors)
+            console.log(result.errors);
+            reject(result.errors);
           }
-          const portfolioTemplate = path.resolve("./src/templates/portfolio.js")
+          const portfolioTemplate = path.resolve(
+            "./src/templates/portfolio.js"
+          );
           // We want to create a detailed page for each
           // post node. We'll just use the WordPress Slug for the slug.
           // The Post ID is prefixed with 'POST_'
@@ -117,41 +118,41 @@ exports.createPages = ({ graphql, actions }) => {
             createPage({
               path: `/portfolio/${edge.node.slug}/`,
               component: slash(portfolioTemplate),
-              context: edge.node,
-            })
-          })
-        })
+              context: edge.node
+            });
+          });
+        });
       })
       // ==== END PORTFOLIO ====
       // ==== BLOG POSTS ====
-
       .then(() => {
         graphql(`
           {
             allWordpressPost {
               edges {
                 node {
-                  title
-                  content
                   excerpt
                   wordpress_id
                   date(formatString: "Do MMM YYYY HH:mm")
+                  title
+                  content
+                  slug
                 }
               }
             }
           }
         `).then(result => {
           if (result.errors) {
-            console.log(result.errors)
-            reject(result.errors)
+            console.log(result.errors);
+            reject(result.errors);
           }
 
-          const posts = result.data.allWordpressPost.edges
-          const postsPerPage = 2
-          const numberOfPages = Math.ceil(posts.length / postsPerPage)
+          const posts = result.data.allWordpressPost.edges;
+          const postsPerPage = 2;
+          const numberOfPages = Math.ceil(posts.length / postsPerPage);
           const blogPostListTemplate = path.resolve(
             "./src/templates/blogPostList.js"
-          )
+          );
 
           Array.from({ length: numberOfPages }).forEach((page, index) => {
             createPage({
@@ -163,22 +164,22 @@ exports.createPages = ({ graphql, actions }) => {
                   index * postsPerPage + postsPerPage
                 ),
                 numberOfPages,
-                currentPage: index + 1,
-              },
-            })
-          })
+                currentPage: index + 1
+              }
+            });
+          });
 
-          const pageTemplate = path.resolve("./src/templates/page.js")
-          _.each(posts, (post) => {
+          const pageTemplate = path.resolve("./src/templates/page.js");
+          _.each(posts, post => {
             createPage({
               path: `/post/${post.node.slug}`,
               component: slash(pageTemplate),
-              context: post.node,
-            })
-          })
+              context: post.node
+            });
+          });
 
-          resolve()
-        })
-      })
-  })
-}
+          resolve();
+        });
+      });
+  });
+};
