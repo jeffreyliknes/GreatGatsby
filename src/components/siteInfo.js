@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 const SiteInfoWrapper = styled.div`
   flex-grow: 1;
-  color: white;
+  color: black;
   margin: auto 0;
 `
 
@@ -13,7 +13,7 @@ const SiteTitle = styled.div`
 `
 
 const SiteTitleLink = styled(Link)`
-  color: white;
+  color: black;
   text-decoration: none;
 `
 

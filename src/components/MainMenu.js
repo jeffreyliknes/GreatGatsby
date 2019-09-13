@@ -5,12 +5,13 @@ import SiteInfo from "./siteInfo"
 
 const MainMenuWrapper = styled.div`
   display: flex;
-  background-color: rgb(3, 27, 77);
+  margin-left: -7.5rem;
+  margin-top: 5vw;
 
 `
 
 const MenuItem = styled(Link)`
-  color: white;
+  color: black;
   display: block;
   padding: 16px 16px;
   
@@ -20,8 +21,10 @@ const MainMenuInner = styled.div`
   max-width: 960px;
   margin: 0 auto;
   display: flex;
-  width: 960px;
+  /* width: 960px; */
   height: 100%;
+  z-index: 3;
+  flex-wrap: wrap;
 `
 
 const MainMenu = () => (

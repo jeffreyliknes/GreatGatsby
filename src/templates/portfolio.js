@@ -1,14 +1,17 @@
-import React from "react"
-import Layout from "../components/layout"
-import styled from "styled-components"
+import React from "react";
+import Layout from "../components/layout";
+import styled from "styled-components";
+// import Background from "portfolioImage.js";
 
 const FeaturedImage = styled.img`
   max-width: 300px;
-  margin: 16px 0;
-`
+  margin: 16px 0; 
+`;
 
 export default ({ pageContext }) => (
   <Layout>
+    {/* <Background /> */}
+    
     <h1>{pageContext.title}</h1>
     <strong>Website URl:</strong>
     <a
@@ -23,4 +26,4 @@ export default ({ pageContext }) => (
     </div>
     <div dangerouslySetInnerHTML={{ __html: pageContext.content }} />
   </Layout>
-)
+);

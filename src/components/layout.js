@@ -14,12 +14,16 @@ const GlobalStyles = createGlobalStyle`
 const LayoutWrapper = styled.div`
   max-width: 960px;
   margin: 0 auto;
+  margin-left: 40vw;
+  padding: 3rem;
+  /* background-color: #f7e7e1; */
 `
 
 const Layout = ({ children }) => (
   <div>
     <GlobalStyles />
     <MainMenu />
+    
     <LayoutWrapper>
       {children}
     </LayoutWrapper>

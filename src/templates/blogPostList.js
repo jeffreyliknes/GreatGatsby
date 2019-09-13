@@ -2,6 +2,8 @@ import React from "react"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import Background from "../components/portfolioImage.js";
+
 
 const Pagination = styled.div`
   display: flex;
@@ -18,8 +20,11 @@ const PageNumber = styled(Link)`
   padding: 8px 16px;
 `
 
+
+
 export default ({ pageContext }) => (
   <Layout>
+    <Background />
     {pageContext.posts.map(post => (
       <div key={post.node.wordpress_id}>
         <h3 dangerouslySetInnerHTML={{ __html: post.node.title }} />
