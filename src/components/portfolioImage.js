@@ -2,9 +2,12 @@ import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 import styled from "styled-components";
 
+import "./SideImage.scss";
+
+
 import BackgroundImage from "gatsby-background-image";
 
-const BackgroundSection = ({ Astro }) => (
+const BackgroundSection = ({ SideImage }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -22,15 +25,15 @@ const BackgroundSection = ({ Astro }) => (
       const imageData = data.desktop.childImageSharp.fluid;
       return (
         <BackgroundImage
-          style={{
-            width: "40%",
-            height: "100vh",
-            top: 0,
-            left: 0,
-            position: "fixed"
-          }}
+          // style={{
+          //   width: "40%",
+          //   height: "100vh",
+          //   top: 0,
+          //   left: 0,
+          //   position: "fixed"
+          // }}
           Tag="section"
-          className={Astro}
+          className={SideImage}
           fluid={imageData}
           // backgroundColor={`#040e18`}
         ></BackgroundImage>

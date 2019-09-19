@@ -17,6 +17,12 @@ const LayoutWrapper = styled.div`
   margin-left: 40vw;
   padding: 3rem;
   /* background-color: #f7e7e1; */
+  @media (max-width: 425px) {
+    margin-left: 0vw !important;
+  }
+  @media (max-width: 768px) {
+    margin-left: 40vw;
+  }
 `
 
 const Layout = ({ children }) => (

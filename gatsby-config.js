@@ -119,6 +119,8 @@ module.exports = {
           "**/*/*/users",
           "**/*/*/menus",
           "**/*/*/portfolio",
+          "**/*/*/logo",
+          "**/*/*/favicon",
         ],
         // Blacklisted routes using glob patterns
         excludedRoutes: [],
@@ -132,5 +134,7 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     'gatsby-plugin-netlify',
+    
+    
   ],
 }
