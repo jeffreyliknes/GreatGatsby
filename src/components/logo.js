@@ -1,19 +1,30 @@
-// import React from 'react'
-// import styled, {createGlobalStyle} from 'styled-components';
-// import { graphql, StaticQuery } from "gatsby";
+import React from 'react';
+import {graphql, StaticQuery} from 'gatsby';
+import styled from 'styled-components';
 
-// const GlobalStyles = createGlobalStyle`
- 
+
+
+const LogoInit = styled.img`
+    max-width: 100px;
+    margin: 16px;
 `
 
+const Logo = () => (
+    <StaticQuery query={graphql`
+    {   
+        allWordpressWpLogo{
+            edges{
+              node{
+                url {
+                  source_url
+                }
+              }
+            }
+          }
+      }
+`} render={props => (
+    <LogoInit src={props.allWordpressWpLogo.edges[0].node.url.source_url}/> 
+)} />
+);
 
-// const Logo = () => (
-//   <StaticQuery query = {graphql`
-//   {
-
-//   }
-  
-//   `;
-// )
-
-// export default Layout
+export default Logo;
