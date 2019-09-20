@@ -119,8 +119,7 @@ module.exports = {
           "**/*/*/users",
           "**/*/*/menus",
           "**/*/*/portfolio",
-          "**/*/*/logo",
-          "**/*/*/favicon",
+          
         ],
         // Blacklisted routes using glob patterns
         excludedRoutes: [],
