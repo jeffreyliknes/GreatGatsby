@@ -1,30 +1,42 @@
-import React from 'react';
-import {graphql, StaticQuery} from 'gatsby';
-import styled from 'styled-components';
 
 
+import React from "react"
+import { graphql, StaticQuery } from "gatsby"
+import styled from "styled-components"
 
-const LogoInit = styled.img`
-    max-width: 100px;
-    margin: 16px;
+const SiteLogoWrapper = styled.div`
+  display: flex;
+  width: 100px;
+  height: 100px;
+  padding: 20px 20px 20px 0;
+`
+const SiteLogoImage = styled.img`
+  max-width: 100%;
 `
 
 const Logo = () => (
-    <StaticQuery query={graphql`
-    {   
-        allWordpressWpLogo{
-            edges{
-              node{
-                url {
-                  source_url
-                }
+  <StaticQuery
+    query={graphql`
+      {
+        allWordpressWpLogo {
+          edges {
+            node {
+              url {
+                source_url
               }
             }
           }
+        }
       }
-`} render={props => (
-    <LogoInit src={props.allWordpressWpLogo.edges[0].node.url.source_url}/> 
-)} />
-);
-
-export default Logo;
+    `}
+    render={props => (
+      <SiteLogoWrapper>
+        <SiteLogoImage
+          src={props.allWordpressWpLogo.edges[0].node.url.source_url}
+          alt=""
+        />
+      </SiteLogoWrapper>
+    )}
+  />
+)
+export default Logo

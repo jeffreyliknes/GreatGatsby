@@ -1,3 +1,4 @@
+
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import Helmet from "react-helmet"
@@ -29,3 +30,4 @@ const SiteFavicon = () => (
 )
 
 export default SiteFavicon
+

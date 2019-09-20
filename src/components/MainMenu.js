@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, StaticQuery, Link } from "gatsby";
 import styled from "styled-components";
 import SiteInfo from "./siteInfo";
+import SiteLogo from "./logo"
 
 const MainMenuWrapper = styled.div`
   display: flex;
@@ -56,6 +57,7 @@ const MainMenu = () => (
     render={props => (
       <MainMenuWrapper>
         <MainMenuInner>
+          <SiteLogo />
           <SiteInfo />
           {props.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(
             item => (
