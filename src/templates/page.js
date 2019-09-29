@@ -1,23 +1,36 @@
 import React from "react";
 import Layout from "../components/layout";
-import HomeBackground from "../components/homeImage.js";
+// import Img from "gatsby-image";
+// import styled from "styled-components";
+import "../components/styles/contentStyle.scss";
 
-// import "../components/SideImage.scss";
+import BackgroundImage from "../components/homeImage";
 
-export default ({ pageContext }) => (
+// const Image = styled(Img)`
+ 
+// `;
+
+export default ({ pageContext, data }) => (
   <Layout>
-    <div
-      style={{
-        width: "40%",
-        height: "100vh",
-        top: 0,
-        left: 0,
-        position: "fixed",
-      }}
-    >
-      <HomeBackground />
+    
+    <BackgroundImage>
+     
+    </BackgroundImage>
+    <div className="right-margin">
+      <h1 dangerouslySetInnerHTML={{ __html: pageContext.title }} />
+      <div dangerouslySetInnerHTML={{ __html: pageContext.content }} />
     </div>
-    <h1 dangerouslySetInnerHTML={{ __html: pageContext.title }} />
-    <div dangerouslySetInnerHTML={{ __html: pageContext.content }} />
   </Layout>
 );
+
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "lightFrontPage.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000, maxHeight: 250) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

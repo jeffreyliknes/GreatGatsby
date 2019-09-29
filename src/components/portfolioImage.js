@@ -1,10 +1,6 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 import styled from "styled-components";
-
-import "./SideImage.scss";
-
-
 import BackgroundImage from "gatsby-background-image";
 
 const BackgroundSection = ({ SideImage }) => (

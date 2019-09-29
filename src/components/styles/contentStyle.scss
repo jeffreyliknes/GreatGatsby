@@ -1,0 +1,41 @@
+.right-margin {
+  margin-left: 40vw;
+}
+
+// .pic {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 100vh;
+
+// }
+
+.gatsby-image-wrapper {
+  
+  @media only screen and (max-width: 575px) {
+    width: 100% !important;
+    height: 45vh !important;
+    z-index: -1;
+  }
+}
+
+.right-margin {
+  @media only screen and (max-width: 575px) {
+    margin: 0;
+  }
+}
+
+.layout__LayoutWrapper-hqKpQK {
+  @media only screen and (max-width: 575px) {
+    z-index: 5;
+    background-color: white;
+    margin: 0;
+    margin-top: 12rem;
+  }
+}
+
+
+
+.astro {
+  width: 600px;
+}

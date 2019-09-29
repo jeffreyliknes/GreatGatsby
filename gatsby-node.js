@@ -52,7 +52,7 @@ exports.createPages = ({ graphql, actions }) => {
         // The Page ID is prefixed with 'PAGE_'
         _.each(result.data.allWordpressPage.edges, edge => {
           // Gatsby uses Redux to manage its internal state.
-          // Plugins and sites can use functions like "createPage"
+          // Plugins and sites can use functions like "createPage" 
           // to interact with Gatsby.
 
           createPage({

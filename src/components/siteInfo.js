@@ -6,6 +6,7 @@ const SiteInfoWrapper = styled.div`
   flex-grow: 1;
   color: black;
   margin: auto 0;
+  font-size: 2rem;
 `
 
 const SiteTitle = styled.div`
