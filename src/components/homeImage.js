@@ -5,14 +5,11 @@ import styled from "styled-components";
 import BackgroundImage from "gatsby-background-image";
 import "../components/styles/contentStyle.scss";
 
-
-
-
 const BackgroundSection = ({ Astro }) => (
   <StaticQuery
     query={graphql`
       query {
-        desktop: file(relativePath: { eq: "lightFrontPage.jpg" }) {
+        desktop: file(relativePath: { eq: "christian-dubovan-gxsRL8B_ZqE-unsplash.jpg" }) {
           childImageSharp {
             fluid(quality: 100, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
@@ -31,22 +28,18 @@ const BackgroundSection = ({ Astro }) => (
             height: "100vh",
             top: 0,
             left: 0,
-            position: "fixed",
+            position: "fixed"
           }}
-        
-
           Tag="section"
           className={Astro}
           fluid={imageData}
-          // backgroundColor={`#040e18`}
-        >
-        
-        </BackgroundImage>
+          backgroundColor={`#040e18`}
+           
+        ></BackgroundImage>
       );
     }}
   />
 );
-
 
 const HomeBackgroundSection = styled(BackgroundSection)`
   display: none;
@@ -56,17 +49,6 @@ const HomeBackgroundSection = styled(BackgroundSection)`
 `;
 
 export default HomeBackgroundSection;
-
-
-
-
-
-
-
-
-
-
-
 
 // import React from 'react';
 // import { graphql } from 'gatsby';

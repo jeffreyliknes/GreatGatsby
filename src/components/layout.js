@@ -1,7 +1,7 @@
 import React from "react";
 import MainMenu from "./MainMenu";
 import styled, { createGlobalStyle } from "styled-components";
-// import SiteFavicon from "./SiteFavicon";
+import Logo from "./logo";
 
 const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
@@ -12,14 +12,10 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-
-
 const LayoutWrapper = styled.div`
   max-width: 960px;
   margin: 0 auto;
-  padding: 3rem;
-  /* margin-left: 40vw; */
-  /* background-color: #f7e7e1; */
+  padding: 2rem;
   @media (max-width: 525px) {
     margin-left: 0vw !important;
   }
@@ -29,12 +25,11 @@ const LayoutWrapper = styled.div`
 `;
 
 const Layout = ({ children }) => (
-  <div>
+  <div className="mainMenu__Layout__wrapper">
     <GlobalStyles />
     {/* <SiteFavicon /> */}
-
-      <MainMenu />
-
+  <Logo />
+    <MainMenu />
 
     <LayoutWrapper>{children}</LayoutWrapper>
   </div>

@@ -2,40 +2,26 @@ import React from "react";
 import { graphql, StaticQuery, Link } from "gatsby";
 import styled from "styled-components";
 import SiteInfo from "./siteInfo";
-// import SiteLogo from "./logo"
 
 const MainMenuWrapper = styled.div`
   display: flex;
   /* margin-left: -5rem; */
-  margin-top: 5vw;
-  @import url('https://fonts.googleapis.com/css?family=Raleway:800,900&display=swap');
-  font-family: 'Raleway', sans-serif;
-
- 
-
-
-  /* @media (max-width: 525px) {
-    margin-left: 0vw !important;
-  }
-  @media (max-width: 768px) {
-    margin-left: 40vw;
-  } */
-  
+  margin-top: 13vw;
+  @import url("https://fonts.googleapis.com/css?family=Raleway:800,900&display=swap");
+  font-family: "Raleway", sans-serif;
 `;
-
-// const MenuStyles = createGlobalStyle`
-//   @import url('https://fonts.googleapis.com/css?family=Raleway:800,900&display=swap');
- 
-//   font-family: 'Raleway', sans-serif;
- 
-  
-// `;
 
 const MenuItem = styled(Link)`
   color: black;
   display: block;
   padding: 16px 16px;
-  font-size: 1.5rem;
+  font-size: 2.1rem;
+  color: #ef6f6c;
+  text-decoration: none;
+  @media (max-width: 575px) {
+    font-size: 2rem;
+    
+  }
 `;
 
 const MainMenuInner = styled.div`
