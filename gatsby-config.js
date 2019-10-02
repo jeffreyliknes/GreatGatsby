@@ -31,7 +31,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/solar.png`, // This path is relative to the root of the site.
+        icon: `src/images/FSE-Icon-reversed-RGB.jpg`, // This path is relative to the root of the site.
       },
     },
     {

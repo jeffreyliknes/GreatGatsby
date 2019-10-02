@@ -1,26 +1,23 @@
-import React from "react"
-import Layout from "../components/layout"
-import { Link } from "gatsby"
-import styled from "styled-components"
+import React from "react";
+import Layout from "../components/layout";
+import { Link } from "gatsby";
+import styled from "styled-components";
 import Background from "../components/portfolioImage.js";
-
 
 const Pagination = styled.div`
   display: flex;
   justify-content: flex-end;
-`
+`;
 
 const PageNumberWrapper = styled.div`
   border: 1px solid #eee;
   background: ${props => (props.isCurrentPage ? "#eee" : "white")};
-`
+`;
 
 const PageNumber = styled(Link)`
   display: block;
   padding: 8px 16px;
-`
-
-
+`;
 
 export default ({ pageContext }) => (
   <Layout>
@@ -48,4 +45,4 @@ export default ({ pageContext }) => (
       ))}
     </Pagination>
   </Layout>
-)
+);

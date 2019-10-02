@@ -5,7 +5,7 @@ import SiteInfo from "./siteInfo";
 
 const MainMenuWrapper = styled.div`
   display: flex;
-  /* margin-left: -5rem; */
+
   margin-top: 13vw;
   @import url("https://fonts.googleapis.com/css?family=Raleway:800,900&display=swap");
   font-family: "Raleway", sans-serif;
@@ -61,7 +61,7 @@ const MainMenu = () => (
     render={props => (
       <MainMenuWrapper>
         <MainMenuInner>
-          {/* <SiteLogo /> */}
+         
           <SiteInfo />
           {props.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(
             item => (

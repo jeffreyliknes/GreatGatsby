@@ -11,11 +11,8 @@ const SiteInfoWrapper = styled.div`
     transform: rotate(90deg);
     left: -8rem;
     top: 30%;
-  /* @media (max-width: 768px) {
-    font-size: 1.7rem;
-    left: -10rem;
-    top: 30%;
-  } */
+    position: fixed;
+
   @media (max-width: 575px) {
     font-size: 1.2rem;
     left: -4rem;
