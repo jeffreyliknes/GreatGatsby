@@ -20,7 +20,6 @@ justify-content: center;
 export default ({ pageContext, data }) => (
   <Layout>
     <SiteInfo />
-
     <h1 dangerouslySetInnerHTML={{ __html: pageContext.title }} />
     <div dangerouslySetInnerHTML={{ __html: pageContext.content }} />
     <FeaturedLogo>
