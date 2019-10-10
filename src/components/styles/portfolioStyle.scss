@@ -1,0 +1,41 @@
+.logo__SiteLogoWrapper-LUXPN {
+  position: fixed;
+  top: 20rem;
+  left: 5rem;
+  width: 15rem;
+  height: auto;
+  z-index: 1;
+  @media (max-width: 750px) {
+    position: absolute;
+    top: 10rem;
+    left: 31%;
+    height: auto;
+    width: 32vw;
+    margin: 0 auto;
+  }
+}
+
+.portfolio__ImageWrapper-bhNTYP {
+  padding-top: 2rem;
+  img {
+    width: 50%;
+    display: flex;
+    margin: 0 auto;
+  }
+}
+
+
+.portfolio__PortfolioGrid-kldKyW {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    p {
+        border: 1px solid lightgray;
+        padding: 3rem;
+    }
+    figure, p {
+        width: 35%;
+
+    }
+}

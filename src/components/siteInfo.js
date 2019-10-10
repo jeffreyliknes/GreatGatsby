@@ -3,20 +3,23 @@ import { graphql, StaticQuery, Link } from "gatsby";
 import styled from "styled-components";
 
 const SiteInfoWrapper = styled.div`
-    flex-grow: 1;
-    color: black;
-    margin: auto 0;
-    font-size: 1.8rem;
+  flex-grow: 1;
+  color: black;
+  margin: auto 0;
+  font-size: 1.2rem;
+  position: fixed;
+  transform: rotate(90deg);
+  left: -5rem;
+  top: 20%;
+  z-index: 30;
+  @media (max-width: 750px) {
     position: absolute;
-    transform: rotate(90deg);
-    left: -8rem;
-    top: 30%;
-    position: fixed;
+  }
 
-  @media (max-width: 575px) {
-    font-size: 1.2rem;
+  @media (max-width: 775px) {
+    font-size: 1rem;
     left: -4rem;
-    top: 20%;
+    top: 15%;
   }
 `;
 
@@ -27,32 +30,13 @@ const SiteTitle = styled.div`
 const SiteTitleLink = styled(Link)`
   color: #ef6f6c;
   text-decoration: none;
-  text-shadow: 1px 1px 0 #000,
-    -1px 1px 0 #000,
-    1px -1px 0 #000,
-    -1px -1px 0 #000,
-    0px 1px 0 #000,
-    0px -1px 0 #000,
-    -1px 0px 0 #000,
-    1px 0px 0 #000,
-    2px 2px 0 #000,
-    -2px 2px 0 #000,
-    2px -2px 0 #000,
-    -2px -2px 0 #000,
-    0px 2px 0 #000,
-    0px -2px 0 #000,
-    -2px 0px 0 #000,
-    2px 0px 0 #000,
-    1px 2px 0 #000,
-    -1px 2px 0 #000,
-    1px -2px 0 #000,
-    -1px -2px 0 #000,
-    2px 1px 0 #000,
-    -2px 1px 0 #000,
-    2px -1px 0 #000,
-    -2px -1px 0 #000;
-
-
+  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000, -1px 0px 0 #000,
+    1px 0px 0 #000, 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000, -1px 0px 0 #000,
+    1px 0px 0 #000, 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000, 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
 `;
 
 const SiteInfo = () => (
