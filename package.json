@@ -13,7 +13,7 @@
     "emotion": "^10.0.17",
     "gatsby": "^2.14.2",
     "gatsby-background-image": "^0.8.9",
-    "gatsby-cli": "^2.7.53",
+    "gatsby-cli": "^2.8.1",
     "gatsby-image": "^2.2.20",
     "gatsby-plugin-manifest": "^2.2.4",
     "gatsby-plugin-netlify": "^2.1.11",

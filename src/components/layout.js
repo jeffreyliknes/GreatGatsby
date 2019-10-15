@@ -3,16 +3,22 @@ import MainMenu from "./MainMenu";
 import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Raleway:300,400&display=swap');
   body, html{
-    font-family: 'Open Sans', sans-serif;
+
+    /* font-family: 'Open Sans', sans-serif; */
     margin: 0 !important;
     padding: 0 !important;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
   }
   h1, h2{
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1.5px;
+
     display: flex;
-   
     justify-content: center;
+    text-align: center;
   }
 `;
 
