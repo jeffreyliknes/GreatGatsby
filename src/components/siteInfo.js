@@ -9,9 +9,12 @@ const SiteInfoWrapper = styled.div`
   font-size: 1.2rem;
   position: fixed;
   transform: rotate(90deg);
-  left: -5rem;
+  left: -7rem;
+  font-family: 'Raleway', sans-serif;
+
   top: 20%;
   z-index: 30;
+  letter-spacing: 4px;
   @media (max-width: 750px) {
     position: absolute;
   }

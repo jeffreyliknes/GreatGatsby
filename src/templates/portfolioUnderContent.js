@@ -7,9 +7,13 @@ import "../components/styles/siteInfoStyle.scss";
 
 
 
+
+
 export default ({ pageContext }) => (
   <Layout>
     <PortfolioImage />
+
+
     <h1 dangerouslySetInnerHTML={{ __html: pageContext.title }} />
     <div dangerouslySetInnerHTML={{ __html: pageContext.content }} />
 

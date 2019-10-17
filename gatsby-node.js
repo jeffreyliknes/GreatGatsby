@@ -103,6 +103,10 @@ exports.createPages = ({ graphql, actions }) => {
       // ==== END PAGES ====
 
       // ==== PORTFOLIO ====
+      //  acf {
+        // portfolio_url
+      // }
+      // for when you want to add acf fields to your project
       .then(() => {
         graphql(
           `
@@ -118,9 +122,7 @@ exports.createPages = ({ graphql, actions }) => {
                     featured_media {
                       source_url
                     }
-                    acf {
-                      portfolio_url
-                    }
+                   
                   }
                 }
               }

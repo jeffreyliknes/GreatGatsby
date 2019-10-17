@@ -4,6 +4,7 @@ import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Raleway:300,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500i&display=swap');
   body, html{
 
     /* font-family: 'Open Sans', sans-serif; */
@@ -19,6 +20,12 @@ const GlobalStyles = createGlobalStyle`
     display: flex;
     justify-content: center;
     text-align: center;
+  }
+  h3{
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    display: flex;
+   
   }
 `;
 
