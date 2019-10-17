@@ -5,6 +5,7 @@ import styled from "styled-components";
 import ElectricalBoard from "../components/electricalBoard";
 import "../components/styles/portfolioImage.scss";
 import Logo from "../components/logo";
+import Footer from "../components/footer";
 import "../components/styles/portfolioStyle.scss";
 
 const FeaturedImage = styled.img`
@@ -60,9 +61,7 @@ export default ({ data, pageContext }) => (
         dangerouslySetInnerHTML={{ __html: pageContext.content }}
       />
     </ImageRows>
-    <div>
-      <h2>footer</h2>
-    </div>
+    <Footer />
   </Layout>
 );
 
